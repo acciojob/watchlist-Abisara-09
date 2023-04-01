@@ -16,6 +16,10 @@ public class MovieController {
     @Autowired
     MovieService movieService;
 
+    // Alternate incase accio assignment is not getting submitted
+    //remove Autowired and do this
+    //MovieService movieService = new MovieService();
+
     @PostMapping("/add-movie")
     public ResponseEntity<String> addMovie(@RequestBody() Movie movie){
         movieService.addMovie(movie);
@@ -29,7 +33,8 @@ public class MovieController {
     }
 
     @PutMapping("/add-movie-director-pair")
-    public ResponseEntity<String> addMovieDirectorPair(@RequestParam("movie") String movieName, @RequestParam("director") String directorNAme){
+    public ResponseEntity<String> addMovieDirectorPair(@RequestParam("movieName") String movieName,
+                                                       @RequestParam("directorName") String directorNAme){
         movieService.addMovieDirectorPair(movieName,directorNAme);
         return new ResponseEntity<>("Movie-Director Pair added successfully ",HttpStatus.CREATED);
     }

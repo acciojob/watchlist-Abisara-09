@@ -6,7 +6,7 @@ public class Director {
     private int numberOfMovies;
     private double imbRating;
 
-    public Director(){
+    public Director() {
 
     }
 
