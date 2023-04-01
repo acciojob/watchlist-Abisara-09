@@ -4,16 +4,15 @@ public class Director {
 
     private String name;
     private int numberOfMovies;
-    private double imbRating;
+    private double imdbRating;
 
     public Director() {
-
     }
 
-    public Director(String name, int numberOfMovies, double imbRating) {
+    public Director(String name, int numberOfMovies, double imdbRating) {
         this.name = name;
         this.numberOfMovies = numberOfMovies;
-        this.imbRating = imbRating;
+        this.imdbRating = imdbRating;
     }
 
     public String getName() {
@@ -32,11 +31,11 @@ public class Director {
         this.numberOfMovies = numberOfMovies;
     }
 
-    public double getImbRating() {
-        return imbRating;
+    public double getImdbRating() {
+        return imdbRating;
     }
 
-    public void setImbRating(double imbRating) {
-        this.imbRating = imbRating;
+    public void setImdbRating(double imdbRating) {
+        this.imdbRating = imdbRating;
     }
 }
